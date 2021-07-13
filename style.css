@@ -1,0 +1,271 @@
+:root{
+    --main-color: #e67e34;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html,body{
+ width: 100%;
+ height: 100vh;
+ font-family: "Arial", sans-serif;
+}
+body{
+    background-image: url(assets/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+/*button*/
+.btn{
+    padding: 1rem;
+    height: 100%;
+    border-radius: 0.3rem;
+    background-color: var(--main-color);
+    color: white;
+    font-weight: 700;
+    cursor:pointer;
+    text-align: center;
+}
+.mainbtn-left,.mainbtn-rigth{
+    display: inline-block;
+    background-color: #d4d3d3;
+    padding: 1rem 0;
+    margin:-1.1rem;
+    cursor:pointer;
+ 
+}
+.mainbtn-left:hover,.mainbtn-rigth:hover{   
+    background-color: #b9b9b9fb;
+}
+
+.mainbtn-rigth{
+    text-align: right;
+}
+/* Topnav*/
+
+.topnav{
+    display: flex;
+    width: 90%;
+    overflow: hidden;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+   
+}
+.navbar-actions ul{
+    list-style: none;
+   
+}
+.navbar-actions ul li{
+    padding: 0.5rem;
+    display: inline-block;
+    cursor:pointer;
+}
+.navbar-actions ul li:nth-child(3),
+.navbar-actions ul li:nth-child(4){
+    margin-left: 4rem;
+   
+}
+.navbar-actions ul li:nth-child(3):hover,
+.navbar-actions ul li:nth-child(4):hover{
+    
+    color: var(--main-color);
+}
+
+/*ladding-page*/
+.ladding-page{
+    
+    width: 90%;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+/*side left menu*/
+.ladding-page .menu{
+    
+    flex-direction: column;
+}
+.ladding-page .menu .menu-section{
+    margin: -1.2rem 0 2.4rem 0; 
+    cursor:pointer;
+}
+.ladding-page .menu .menu-section:hover{
+    color:var(--main-color)
+}
+.ladding-page .menu .menu-icon{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+   
+}
+
+/*main content*/
+.content-main{
+    margin-top: -6rem;
+    width: 30%;
+    
+
+}
+.content-main .main-title{
+    color: var(--main-color);
+    padding:0.4rem;
+    font-size: 3rem;
+}
+.content-main .main-price{
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+/*form-controler*/
+.controler{
+    display: flex;
+    flex-direction: column;
+}
+.controler .controller-radius{
+    text-align: center;
+    padding: 2rem 0;
+   
+}
+/*Para fazer um checkbox customizado temos que:
+1 - esconder o padrão
+2 - definir no label o designer do checkbox(.input-clothe + label leitura apos input-clothe pegue o label)
+3 - defina o estado apos checked
+*/
+.controller-radius .input-clothe{
+    display: none;
+}
+.controler .input-clothe + label{
+    content: '';
+    vertical-align: middle;
+    border: 1px solid rgb(170, 170, 170);
+    border-radius: 50%;
+    padding: 0.5rem;
+    font-size: 0.7rem;
+    margin: 0.8rem
+}
+.controler .input-clothe:checked + label{
+    border: 1px solid var(--main-color);
+}
+.controler{
+    user-select: none;
+}
+.controler .controller-itens{
+    padding: 0 0 1rem 0;
+    text-align: center;
+    
+   
+}
+.controler .controller-itens .input-qte{
+    border: none;
+    display: inline-block;
+    background: linear-gradient(top, #f9f9f9, #e3e3e3);
+    cursor: pointer;
+    text-shadow: 1px 1px #fff; 
+    width: 50px;
+}
+.controler .controller-itens span{
+    
+    padding:0.4rem ;
+    font-size: 1.3rem;
+    cursor:pointer;
+  
+}
+
+/*modal*/
+
+.modal-overlay{
+    width: 100%;
+    height: 120%;
+    
+    background-color: rgba(0, 0, 0, 0.7);
+
+    position: absolute;
+    top: 0;
+    visibility: hidden;
+
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.modal-overlay.active{
+    visibility: visible;
+}
+.modal{
+    height: 28rem;
+    width: 30em;
+
+    padding: 2rem;
+    margin-top: -7.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0.2rem 0.25rem 0.1rem rgb(218, 217, 217);
+    background-color: white;
+
+    text-align: center;
+}
+
+.modal h1{
+    text-align: center;
+    padding: 0.6rem;
+    margin: 0.6rem 0;
+    margin-bottom: 0.8rem;
+}
+.modal .input-group{
+    width: 100%;
+    margin: 0.5rem 0 ;
+    padding:0 2rem;
+    text-align: left;
+}
+.modal label{
+    color:#a1a1a1;
+    padding: 1rem 0;
+    margin: 0.5rem 0;
+    cursor:pointer;
+}
+.modal input{
+    display: block;
+    border: 1px solid #999;   
+    padding: 0.2rem;
+    margin: 0.3rem;
+    border-radius: 0.3rem;
+    width: 100%;
+    outline: none;
+}
+.modal input:focus{
+    border-bottom: 2px solid var(--main-color);
+}
+.modal button{
+    width: 90%;
+    border: 0.3rem;
+    margin: 2rem;
+}
+.modal button:hover{
+    background-color: #e67e34e3;
+   
+}
+.modal a{
+    text-decoration: none;
+    margin:rem 0 0 0 ;
+    color: blue;
+}
+
+.modal nav{
+    font-size: 2rem;
+    color: #999;
+    width: 1rem;
+    height: 1rem;
+    float: right;
+    
+    
+}
+.modal nav:hover{
+    color: red;
+}

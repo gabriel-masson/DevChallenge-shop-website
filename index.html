@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+   
+    
+    <header class="topnav">
+        <div class="btn">
+           Shop 
+        </div>
+        <nav class="navbar-actions">
+            <ul>
+                <li>My Account</li>
+                <li>Search</li>
+                <li><i class="fa fa-shopping-basket"></i></li>
+                <li> <i class="fa fa-align-right"></i></li>
+            </ul>
+        </nav>
+    </header>
+ 
+    <main class="ladding-page">
+        <div class="menu">
+            <div>
+                <p class="menu-section">WOMEN</p>
+                <p class="menu-section">MEN</p>
+                <p class="menu-section">SHOES</p>
+                <p class="menu-section">BRAND</p> 
+            </div>
+            
+            <div class="menu-icon">
+                <i class="fa fa-facebook-f"></i>
+                <i class="	fa fa-instagram"></i>
+                <i class="	fa fa-linkedin"></i>
+            </div>
+        </div>
+
+        <div class="content-main">
+            <h1 class="main-title">BRAND SWEATSHIRT</h1>
+            <p class="main-price"><strong>$1000</strong></p>
+            <div class="mainbtn-left">
+                <span class="main-slidebtn"><i class="fa fa-long-arrow-left"></i> PREV</span>
+            </div>
+            
+           
+        </div>
+
+        <div class="controler">
+
+            <form class="controller-content"></form>
+                <div style="text-align: right;"> 
+                    <div class="mainbtn-rigth">
+                    <span class="main-slidebtn"> NEXT<i class="fa fa-long-arrow-right"></i></span>
+                    </div>
+                </div>
+                
+    
+                <!-- escondo o input e deixo o label visivel,pq ao clicar no label o input fica checked-->
+                <div class="controller-radius"> 
+                    <input type="radio" name="length-clothes" id="S" placeholder="S" class="input-clothe">
+                    <label for="S">S</label>
+        
+                    <input type="radio" name="length-clothes" id="M" placeholder="M" class="input-clothe">
+                    <label for="M">M</label>
+        
+                    <input type="radio" name="length-clothes" id="L" placeholder="L" class="input-clothe">
+                    <label for="L">L</label>
+    
+                </div>
+                <div class="controller-itens">
+                    <label for="content-qte"></label>
+                    <span id="qte-drecreases" onclick="Controler.decreasesQte()" >-</span> 
+                    <input type="number" name="content-qte" id="content-qte"  class="input-qte"  value="0"> 
+                    <span id="qte-increases" onclick="Controler.increasesQte()">+</span>  
+                </div>
+                
+                <div class="btn" onclick="Modal.open()">ADD TO CART</div>
+    
+            </form>
+        </div>
+    </main>
+   
+     <div class="modal-overlay">
+         <div class="modal">
+
+             
+             <form action=""  onsubmit="Form.submit(event)" >
+                 <nav onclick="Modal.close()">&times;</nav>
+                 <h1>Log in</h1>
+                 <div class="input-group">
+                    <label for="input-email">E-mail</label>
+                    <input type="email" name="input-email" id="input-email"
+                    placeholder="E-mail">
+                </div>
+                 <div class="input-group">
+                    <label for="input-password">Password</label>
+                    <input type="password" name="input-password" id="input-password"
+                    placeholder="password"> 
+                 </div>
+                 
+                 <button class="btn" >Login</button>
+                 <div>
+                     <a href="#">login forgot the password?</a>
+                 </div>
+             </form>
+         </div>
+     </div>   
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+ 
